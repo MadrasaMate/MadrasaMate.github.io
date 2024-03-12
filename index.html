@@ -56,8 +56,7 @@
     <header aria-labelledby="page-title" class="clearfix site-main-header">
         <div class="container">
             <h1 id="page-title">Madrasa Mate</h1>
-            <p class="col-1-2">With Madrasa Mate you can download your exam results in matter of
-                seconds.</p>
+            <p class="col-1-2">With Madrasa Mate you can download your exam results in matter of seconds.</p>
         </div>
     </header>
     <section role="region" aria-label="contact-form" class="site-main-section">
@@ -88,8 +87,7 @@
                             </select>
                             <!--<label>Issue Details</label>
                             <textarea placeholder="Provide as much detail as you can so we can address your issue."></textarea>-->
-                            <input type="submit" value="Submit"
-                                   class="button button-primary float-right"/>
+                            <input type="submit" value="Submit" class="button button-primary float-right"/>
                         </form>
                     </div>
                     <div class="col-1-2">
@@ -165,12 +163,12 @@ function validateInputs() {
   submitOK = "true";
 
   if (inputRegNo.length > 5) {
-    document.getElementById("errorId").innerHTML = "The Reg No may have no more than 5 characters";
+    document.getElementById("errorId").innerHTML = "The Reg. No. may have no more than 5 characters";
     submitOK = "false";
   }
 
   if (isNaN(inputRegNo) || inputRegNo < 1 || inputRegNo > 200) {
-    document.getElementById("errorId").innerHTML = "The Reg No must be a number between 1 and 200";
+    document.getElementById("errorId").innerHTML = "Incorrect register number!. The Reg. No. must be a number between 1 and 200";
     submitOK = "false";
   }
 
