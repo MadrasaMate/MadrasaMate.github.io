@@ -56,7 +56,7 @@
     <header aria-labelledby="page-title" class="clearfix site-main-header">
         <div class="container">
             <h1 id="page-title">Madrasa Mate</h1>
-            <p class="col-1-2">With Madrasa Mate you can download your exam results in matter of seconds.</p>
+            <p class="col-1">With Madrasa Mate you can download your exam results in matter of seconds.</p>
         </div>
     </header>
     <section role="region" aria-label="contact-form" class="site-main-section">
@@ -66,9 +66,8 @@
                     <div class="col-1-2">
                         <figure class="alert alert-error" id="errorContent">
                             <div class="alert-content">
-                                <img src="https://s3.amazonaws.com/codecademy-content/programs/ui-design/color-ui/icon-help.svg"
-                                     alt="Help indicator"/>
-                                <p id="errorId">Looks like you forgot to add your name!</p>
+                                <img src="https://s3.amazonaws.com/codecademy-content/programs/ui-design/color-ui/icon-help.svg" alt="Help indicator"/>
+                                <p id="errorId">Looks like you forgot to enter your Reg no.!</p>
                             </div>
                         </figure>
                         <h2 class="section-header">Exam Result</h2>
@@ -94,9 +93,9 @@
                         <p><b>Our Location</b></p>
                         <img src="image/banner.png" alt="Office Location"/>
                         <ul class="location-details">
-                            <!--<li><b>Address : </b>Kuttikkunnu, Kuthuparamba, Kerala 670643, India</li>
+                            <li><b>Address : </b>Kuttikkunnu, Kuthuparamba, Kerala 670643, India</li>
                             <li><b>Phone : </b>0490-2360492</li>
-                            <li><b>Email:</b> support@citrusmail.com</li>-->
+<!--                            <li><b>Email : </b>support@citrusmail.com</li>-->
                         </ul>
                     </div>
                 </div>
@@ -162,21 +161,20 @@ function validateInputs() {
   var errorContent = document.getElementById ( "errorContent" ) ;
   submitOK = "true";
 
-  if (inputRegNo.length > 5) {
-    document.getElementById("errorId").innerHTML = "The Reg. No. may have no more than 5 characters";
-    submitOK = "false";
-  }
-
-  if (isNaN(inputRegNo) || inputRegNo < 1 || inputRegNo > 200) {
-    document.getElementById("errorId").innerHTML = "Incorrect register number!. The Reg. No. must be a number between 1 and 200";
-    submitOK = "false";
-  }
-
   if (isNaN(inputClass) || inputClass < 7 || inputClass > 10) {
     document.getElementById("errorId").innerHTML = "Please select the class";
     submitOK = "false";
   }
 
+  if (isNaN(inputRegNo) || inputRegNo < 1 || inputRegNo > 200) {
+    document.getElementById("errorId").innerHTML = "Incorrect register number!";
+    submitOK = "false";
+  }
+
+  if (inputRegNo.length == 0) {
+    document.getElementById("errorId").innerHTML = "Please enter your registration number";
+    submitOK = "false";
+  }
 
   if (submitOK == "false") {
     errorContent.style.visibility = "visible"
