@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Madrasa Mate</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1 user-scalable=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
+<body>
+<!-- Site Wide Header -->
+<header role="banner" aria-label="site-wide-navigation" class="site-header">
+    <div class="container">
+        <nav role="navigation" aria-label="navigation" class="site-header-nav">
+
+            <ul class="site-nav-left">
+                <li>
+                    <a href="#">
+                        <img src="image/logo_mono.png" alt="Madrasa Mate" class="logo"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="site-nav-link">About</a>
+                </li>
+                <li>
+                    <a href="#" class="site-nav-link">Contact Us</a>
+                </li>
+            </ul>
+
+            <ul class="site-nav-right">
+                <li>
+                    <a href="#" class="site-nav-link" aria-label="site-wide-search-button" role="button">
+                        <img src="https://s3.amazonaws.com/codecademy-content/programs/ui-design/color-ui/icon-search.svg" alt="Search" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="button button-secondary button-small site-nav-link">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- Site Main Content -->
+<main role="main" class="site-main">
+    <header aria-labelledby="page-title" class="clearfix site-main-header">
+        <div class="container">
+            <h1 id="page-title">Madrasa Mate</h1>
+            <p class="col-1-2">With Madrasa Mate you can download your exam results in matter of
+                seconds.</p>
+        </div>
+    </header>
+    <section role="region" aria-label="contact-form" class="site-main-section">
+        <div class="container">
+            <div class="card contact-form-container">
+                <div class="clearfix">
+                    <div class="col-1-2">
+                        <figure class="alert alert-error" id="errorContent">
+                            <div class="alert-content">
+                                <img src="https://s3.amazonaws.com/codecademy-content/programs/ui-design/color-ui/icon-help.svg"
+                                     alt="Help indicator"/>
+                                <p id="errorId">Looks like you forgot to add your name!</p>
+                            </div>
+                        </figure>
+                        <h2 class="section-header">Exam Result</h2>
+                        <form role="form" class="clearfix" onsubmit="return validateInputs()">
+                            <!--<label>Your Name</label>
+                            <input type="text" placeholder="Full Name" class="input-error" />-->
+                            <label>Please enter your Registration number</label>
+                            <input type="number" placeholder="Reg. No." id="inputRegNo" size="4"/>
+                            <label>Please select your Class</label>
+                            <select id="inputClass">
+                                <option selected disabled>[Select class]</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                            <!--<label>Issue Details</label>
+                            <textarea placeholder="Provide as much detail as you can so we can address your issue."></textarea>-->
+                            <input type="submit" value="Submit"
+                                   class="button button-primary float-right"/>
+                        </form>
+                    </div>
+                    <div class="col-1-2">
+                        <p><b>Our Location</b></p>
+                        <img src="image/banner.png" alt="Office Location"/>
+                        <ul class="location-details">
+                            <!--<li><b>Address : </b>Kuttikkunnu, Kuthuparamba, Kerala 670643, India</li>
+                            <li><b>Phone : </b>0490-2360492</li>
+                            <li><b>Email:</b> support@citrusmail.com</li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="site-main-background" arai-hidden="true"></div>
+</main>
+<!-- Site Wide Footer -->
+<footer role="contentinfo" class="footer">
+    <div class="container">
+        <nav role="navigation" class="clearfix">
+            <ul class="col-1-4 footer-section">
+                <li>
+                    <img src="image/logo_launcher.png" alt="Madrasa Mate" class="logo"/>
+                </li>
+                <!--<li>
+                    <p><smalL>All Rights Reserved | &copy; <time>2024</time></smalL></p>
+                </li>-->
+            </ul>
+            <div class="col-1-4 footer-section" aria-labelledby="product-pages">
+                <p id="product-pages"><b>About</b></p>
+                <ul>
+                    <li>
+                        <a href="#">Features</a>
+                    </li>
+                    <li>
+                        <a href="#">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#">Schedule Demo</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-1-4 footer-section" aria-labelledby="support-pages">
+                <p id="support-pages"><b>Support</b></p>
+                <ul>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="#">API Status</a>
+                    </li>
+                </ul>
+            </div>
+            <!--<div class="col-1-4 footer-section" arai-labelledby="social-links">
+                <p id="support-pages"><b>Stay Up To Date</b></p>
+                <form>
+                    <input type="email" placeholder="Your emaill address" class="footer-email-input">
+                    <input type="submit" value="Submit" class="button button-secondary footer-email-button"/>
+                </form>
+            </div>-->
+        </nav>
+    </div>
+</footer>
+<script>
+function validateInputs() {
+  var inputRegNo = document.getElementById("inputRegNo").value;
+  var inputClass = document.getElementById("inputClass").value;
+  var errorContent = document.getElementById ( "errorContent" ) ;
+  submitOK = "true";
+
+  if (inputRegNo.length > 5) {
+    document.getElementById("errorId").innerHTML = "The Reg No may have no more than 5 characters";
+    submitOK = "false";
+  }
+
+  if (isNaN(inputRegNo) || inputRegNo < 1 || inputRegNo > 200) {
+    document.getElementById("errorId").innerHTML = "The Reg No must be a number between 1 and 200";
+    submitOK = "false";
+  }
+
+  if (isNaN(inputClass) || inputClass < 7 || inputClass > 10) {
+    document.getElementById("errorId").innerHTML = "Please select the class";
+    submitOK = "false";
+  }
+
+
+  if (submitOK == "false") {
+    errorContent.style.visibility = "visible"
+    return false;
+  } else {
+    errorContent.style.visibility = "hidden"
+    location.href = "result/class" + inputClass + "/" + inputRegNo + ".pdf";
+    return false;
+  }
+}
+
+</script>
+</body>
+</html>
