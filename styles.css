@@ -323,6 +323,10 @@ small {
   background-color: #FC472E;
 }
 
+.alert-404 {
+  background-color: #FC472E;
+}
+
 .alert img {
   display: inline-block;
   height: 15px;
